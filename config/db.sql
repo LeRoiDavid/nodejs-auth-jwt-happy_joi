@@ -1,0 +1,13 @@
+CREATE DATABASE `node_jwt`;
+GRANT ALL PRIVILEGES ON node_jwt.* TO 'david'@'localhost';
+FLUSH PRIVILEGES;
+USE node_jwt;
+
+CREATE TABLE users (
+    `id` INT AUTO_INCREMENT,
+    `name` VARCHAR(70) NOT NULL,
+    `email` VARCHAR(70) NOT NULL UNIQUE,
+    `password` VARCHAR(1000) NOT NULL,
+    `date` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT key1 PRIMARY KEY (id)
+);
